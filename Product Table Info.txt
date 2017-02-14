@@ -1,0 +1,3 @@
+image, id, name, flavour, description, quantity, bin number, 
+
+grape balls of fire, grape/cinnamin mix

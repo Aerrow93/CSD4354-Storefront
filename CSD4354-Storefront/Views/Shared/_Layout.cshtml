@@ -3,10 +3,10 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>Chew On This</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-
+    <link rel="icon" type="image" href="~/Images/favicon2.ico" sizes="16x16">
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -17,23 +17,38 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Chew On This", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Products", "Index", "Product")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Cart", "Details", "Cart", new { id = HttpContext.Current.Session["cartId"] }, null)</li>
+                    <!-- First one is label, second is action, third is which controller that is on-->
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
     </div>
     <div class="container body-content">
+
+        <div class="jumbotron">
+            <div class="container">
+                <h1>
+                    <span style="color: #ffffff;">
+                        <img class="img-responsive" src="/Images/jumbotron3.png" style="margin-bottom: -10px" />
+                    </span>
+                </h1>
+                <h2>Chew On This</h2>
+                <h3></h3>
+            </div>
+        </div>
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - Chew On This</p>
         </footer>
     </div>
 
