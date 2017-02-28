@@ -93,8 +93,8 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Item.Id }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Item.Id }, new {@class="btn btn-warning"})
+    @Html.ActionLink("Back to List", "Index", new { @class = "btn btn-success" })
 </p>
 <p>
     @using (Html.BeginForm("AddToCart", "Cart", new { id = Model.Item.Id }))

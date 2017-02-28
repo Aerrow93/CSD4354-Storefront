@@ -226,7 +226,7 @@
     <Content Include="flavicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
+    <Content Include="Content\site.css" />
     <Content Include="Images\favicon.ico" />
     <Content Include="Images\gumballMachine.png" />
     <Content Include="Images\jumbotron.png" />
